@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Wedding//EN
+BEGIN:VEVENT
+DTSTART:20260918T170000
+DTEND:20260919T010000
+SUMMARY:Wedding of Mayssa & Aziz
+LOCATION:Dar Bouraoui, La Marsa, Tunisia
+DESCRIPTION:Wedding celebration of Mayssa & Aziz at Dar Bouraoui, La Marsa.
+END:VEVENT
+END:VCALENDAR

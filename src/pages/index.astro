@@ -1,137 +1,80 @@
 ---
-// Static wedding invitation page - 100% static, no SSR or backend
 ---
 
-<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mayssa Yacoubi & Aziz - Wedding</title>
-  
-  <!-- Google Fonts - Playfair Display -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-    html {
-      scroll-behavior: smooth;
-    }
-    
-    body {
-      font-family: 'Playfair Display', Georgia, serif;
-      background-color: #F5F1E8;
-      color: #5D4037;
-      -webkit-font-smoothing: antialiased;
-    }
-    
-    img {
-      max-width: 100%;
-      display: block;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- STAGE 1: Hero with background image and invitation card -->
-  <section class="relative min-h-screen w-full flex items-center justify-center px-6 py-16">
-    <!-- Background image -->
-    <div class="absolute inset-0 w-full h-full">
-      <img 
-        src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80" 
-        alt="Wedding background placeholder" 
-        class="w-full h-full object-cover"
-      >
-      <div class="absolute inset-0 bg-black/30"></div>
-    </div>
-    
-    <!-- Invitation card -->
-    <div class="relative z-10 w-full max-w-md bg-cream/95 backdrop-blur-sm rounded-xl shadow-2xl p-8 sm:p-10 text-center border border-pastel-green/30">
-      <p class="text-sm text-pastel-green-dark uppercase tracking-widest mb-6">Together with their families</p>
-      
-      <p class="text-xl text-soil mb-2">Family Yacoubi</p>
-      <p class="text-lg text-soil/60 mb-2">&</p>
-      <p class="text-xl text-soil mb-8">Family Nechi</p>
-      
-      <div class="w-20 h-px bg-gradient-to-r from-transparent via-pastel-green to-transparent mx-auto mb-8"></div>
-      
-      <p class="text-sm text-soil/70 uppercase tracking-widest mb-6">invite you to the wedding of</p>
-      
-      <h1 class="text-4xl sm:text-5xl font-semibold text-soil mb-2">Mayssa</h1>
-      <p class="text-2xl text-pastel-green-dark mb-2">&</p>
-      <h1 class="text-4xl sm:text-5xl font-semibold text-soil mb-8">Aziz</h1>
-      
-      <div class="w-20 h-px bg-gradient-to-r from-transparent via-sage to-transparent mx-auto mb-8"></div>
-      
-      <p class="text-xl text-soil font-medium mb-2">September 18, 2026</p>
-      <p class="text-lg text-soil/80">Dar Bouraoui, La Marsa</p>
-    </div>
-  </section>
-
-  <!-- STAGE 2: Location (bigger) -->
-  <section class="px-6 py-20 bg-cream-dark">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-3xl sm:text-4xl font-semibold text-soil mb-6">Location</h2>
-      
-      <p class="text-xl sm:text-2xl text-soil/80 mb-4">Dar Bouraoui</p>
-      <p class="text-lg sm:text-xl text-soil/60 mb-10">La Marsa, Tunisia</p>
-      
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a 
-          href="https://maps.app.goo.gl/JPMzeR5uZHT3Q4VD9" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 bg-pastel-green hover:bg-pastel-green-light text-cream font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto justify-center"
-        >
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-          </svg>
-          Open in Google Maps
-        </a>
-        
-        <a 
-          href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Mayssa%20%26%20Aziz%20Wedding%0ADTSTART:20260918T160000Z%0ADTEND:20260919T000000Z%0ADESCRIPTION:Wedding%20of%20Mayssa%20Yacoubi%20and%20Aziz%20Nechi%0ALOCATION:Dar%20Bouraoui%2C%20La%20Marsa%2C%20Tunisia%0AEND:VEVENT%0AEND:VCALENDAR"
-          download="mayssa-aziz-wedding.ics"
-          class="inline-flex items-center gap-2 bg-soil hover:bg-soil-light text-cream font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto justify-center"
-        >
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/>
-          </svg>
-          Add to Calendar
-        </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mayssa & Aziz – Wedding Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-cream text-soil font-display">
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center">
+      <img
+        src="/assets/background image 1.jpg"
+        alt="Garden wedding scene"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 mx-4 max-w-md w-full bg-cream/95 backdrop-blur-sm rounded-2xl px-6 py-10 text-center shadow-xl">
+        <p class="text-base md:text-lg tracking-widest uppercase mb-6">Together with their families</p>
+        <p class="text-lg md:text-xl mb-6">Family Yacoubi &amp; Family Nechi</p>
+        <p class="text-base md:text-lg italic mb-4">invite you to the wedding of</p>
+        <h1 class="text-5xl md:text-6xl font-bold mb-8">Mayssa &amp; Aziz</h1>
+        <div class="w-16 h-px bg-accent mx-auto mb-8"></div>
+        <p class="text-xl md:text-2xl font-semibold">September 18, 2026</p>
+        <p class="text-lg md:text-xl mt-2">20h00 – 00h00</p>
+        <p class="text-lg md:text-xl mt-2">Dar Bouraoui, La Marsa</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- STAGE 3: Blessed Verse -->
-  <section class="px-6 py-20 bg-gradient-to-b from-cream-dark to-cream">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-3xl sm:text-4xl font-semibold text-soil mb-10">Blessed Verse</h2>
-      
-      <!-- Arabic Ayah -->
-      <div class="text-right leading-loose text-soil text-2xl sm:text-3xl md:text-4xl mb-6" dir="rtl">
-        <p class="font-medium">
-          وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
+    <!-- Location Section -->
+    <section class="bg-cream py-20 px-6 text-center">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Dar Bouraoui</h2>
+        <p class="text-xl mb-10">La Marsa, Tunisia</p>
+        <div class="w-16 h-px bg-accent mx-auto mb-10"></div>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://maps.app.goo.gl/JPMzeR5uZHT3Q4VD9"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block px-8 py-3 bg-accent text-cream rounded-full font-semibold tracking-wide hover:opacity-90 transition-opacity"
+          >
+            Open in Google Maps
+          </a>
+          <a
+            href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+of+Mayssa+%26+Aziz&dates=20260918T170000/20260919T010000&location=Dar+Bouraoui%2C+La+Marsa%2C+Tunisia&details=Wedding+celebration+of+Mayssa+%26+Aziz+at+Dar+Bouraoui%2C+La+Marsa."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block px-8 py-3 border-2 border-accent text-accent rounded-full font-semibold tracking-wide hover:bg-accent hover:text-cream transition-colors"
+          >
+            Add to Google Calendar
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blessed Verse Section -->
+    <section class="bg-cream py-20 px-6 text-center">
+      <div class="max-w-3xl mx-auto">
+        <div class="w-16 h-px bg-accent mx-auto mb-12"></div>
+        <p dir="rtl" lang="ar" class="text-2xl md:text-3xl leading-relaxed mb-4">
+          وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
         </p>
-      </div>
-      <p class="text-lg text-pastel-green-dark mb-10" dir="rtl">سورة الرّوم - ٢١</p>
-      
-      <!-- Translation -->
-      <div class="bg-cream-dark rounded-xl p-8 shadow-lg border border-pastel-green/20">
-        <p class="text-xl sm:text-2xl text-soil/90 leading-relaxed">
+        <p dir="rtl" lang="ar" class="text-base text-soil/70 mb-10">سورة الرّوم - ٢١</p>
+        <p class="text-lg md:text-xl italic leading-relaxed mb-4">
           "And of His signs is this: He created for you helpmeets from yourselves that you might find rest in them, and He ordained between you love and mercy."
         </p>
-        <p class="text-lg text-pastel-green-dark mt-4">Surah Ar-Rum - 21</p>
+        <p class="text-base text-soil/70">Surah Ar-Rum - 21</p>
+        <div class="w-16 h-px bg-accent mx-auto mt-12"></div>
       </div>
-    </div>
-  </section>
-
-</body>
+    </section>
+  </body>
 </html>
